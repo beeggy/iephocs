@@ -10,7 +10,7 @@ All you need to do is Copy and Paste the commands posted below to the console/te
 ### Commands
 
 ```
-wget https://raw.githubusercontent.com/PHCarl10/PHCarlOCS/master/OCS_Panel
+wget https://raw.githubusercontent.com/iephdeveloper/iephocs/master/OCS_Panel
 ```
 ```
 chmod +x OCS_Panel
