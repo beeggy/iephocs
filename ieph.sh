@@ -22,7 +22,7 @@ vps="vps";
 if [[ $vps = "vps" ]]; then
 	source="https://raw.githubusercontent.com/iephdeveloper/iephocs/master"
 else
-	source="https://raw.githubusercontent.com/iephdeveloper/iephocs/master"
+	source="https://raw.githubusercontent.com/Dreyannz/iephocs/master"
 fi
 
 # go to root
@@ -50,7 +50,7 @@ echo -e "\e[94m             Default Values Are Given,            "
 echo -e "\e[94m             Please Change If You Want            "
 echo -e "\e[94m                                                  "
 echo -e "\e[94m  What will be the password for MySQL root User?  "
-read -p "          Root Password   :  " -e -i phc-raf DatabasePass
+read -p "          Root Password   :  " -e -i phcraf DatabasePass
 echo -e "\e[94m                                                  "
 echo -e "\e[94m         What will be the DataBase Name?          "
 read -p "          Database Name   :  " -e -i OCS_PANEL DatabaseName
