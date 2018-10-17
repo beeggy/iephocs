@@ -20,9 +20,9 @@ fi
 vps="vps";
 
 if [[ $vps = "vps" ]]; then
-	source="https://raw.githubusercontent.com/PHCarl10/PHCarlOCS/master"
+	source="https://raw.githubusercontent.com/iephdeveloper/iephocs/master"
 else
-	source="https://raw.githubusercontent.com/Dreyannz/PHCarlOCS/master"
+	source="https://raw.githubusercontent.com/iephdeveloper/iephocs/master"
 fi
 
 # go to root
@@ -35,13 +35,14 @@ MYIP=$(wget -qO- ipv4.icanhazip.com);
 
 clear
 echo -e "                                                        "
-echo -e "\e[94m         _|_|_|    _|    _|    _|_|_|                      _|            "
-echo -e "\e[94m         _|    _|  _|    _|  _|          _|_|_|  _|  _|_|  _|          "
-echo -e "\e[94m         _|_|_|    _|_|_|_|  _|        _|    _|  _|_|      _|          "
-echo -e "\e[94m         _|        _|    _|  _|        _|    _|  _|        _|              "
-echo -e "\e[94m         _|        _|    _|    _|_|_|    _|_|_|  _|        _|            "
+echo 'echo -e "\e[0;34m██╗███████╗██████╗ ██╗  ██╗"' >> .bashrc
+echo 'echo -e "\e[0;34m██║██╔════╝██╔══██╗██║  ██║"' >> .bashrc
+echo 'echo -e "\e[0;34m██║█████╗  ██████╔╝███████║"' >> .bashrc
+echo 'echo -e "\e[0;34m██║██╔══╝  ██╔═══╝ ██╔══██║"' >> .bashrc
+echo 'echo -e "\e[0;34m██║███████╗██║     ██║  ██║"' >> .bashrc
+echo 'echo -e "\e[0;34m╚═╝╚══════╝╚═╝     ╚═╝  ╚═╝"' >> .bashrc
 echo -e "\e[94m.  ---------------------------------------------------------------      "
-echo -e "\e[94m        OCS Panel Template by PHCarl        "
+echo -e "\e[94m        OCS Panel Template by PHC-Raf(IEPHDEVS)        "
 echo -e "\e[94m                                                  "
 echo -e "\e[94m              Pre-Installation Setup              "
 echo -e "\e[94m                                                  "
@@ -49,7 +50,7 @@ echo -e "\e[94m             Default Values Are Given,            "
 echo -e "\e[94m             Please Change If You Want            "
 echo -e "\e[94m                                                  "
 echo -e "\e[94m  What will be the password for MySQL root User?  "
-read -p "          Root Password   :  " -e -i phcarl DatabasePass
+read -p "          Root Password   :  " -e -i phc-raf DatabasePass
 echo -e "\e[94m                                                  "
 echo -e "\e[94m         What will be the DataBase Name?          "
 read -p "          Database Name   :  " -e -i OCS_PANEL DatabaseName
@@ -63,14 +64,15 @@ apt-get update -y
 apt-get install build-essential expect -y
 
 echo "clear"                                                              >> .bashrc
-echo 'echo -e "\e[94m         _|_|_|    _|    _|    _|_|_|                      _|            "' >> .bashrc
-echo 'echo -e "\e[94m         _|    _|  _|    _|  _|          _|_|_|  _|  _|_|  _|          "' >> .bashrc
-echo 'echo -e "\e[94m         _|_|_|    _|_|_|_|  _|        _|    _|  _|_|      _|          "' >> .bashrc
-echo 'echo -e "\e[94m         _|        _|    _|  _|        _|    _|  _|        _|              "' >> .bashrc
-echo 'echo -e "\e[94m         _|        _|    _|    _|_|_|    _|_|_|  _|        _|            "' >> .bashrc
+echo 'echo -e "\e[0;34m██╗███████╗██████╗ ██╗  ██╗"' >> .bashrc
+echo 'echo -e "\e[0;34m██║██╔════╝██╔══██╗██║  ██║"' >> .bashrc
+echo 'echo -e "\e[0;34m██║█████╗  ██████╔╝███████║"' >> .bashrc
+echo 'echo -e "\e[0;34m██║██╔══╝  ██╔═══╝ ██╔══██║"' >> .bashrc
+echo 'echo -e "\e[0;34m██║███████╗██║     ██║  ██║"' >> .bashrc
+echo 'echo -e "\e[0;34m╚═╝╚══════╝╚═╝     ╚═╝  ╚═╝"' >> .bashrc
 echo 'echo -e "\e[94m.  ---------------------------------------------------------------      "' >> .bashrc
 echo 'echo -e "                                                        "' >> .bashrc
-echo 'echo -e "\e[94m        OCS Panel Template by PHCarl        "' >> .bashrc
+echo 'echo -e "\e[94m        OCS Panel Template by PHC-Raf(IEPHDEVS)        "' >> .bashrc
 echo 'echo -e "\e[0m                                                   "' >> .bashrc
 
 apt-get install -y mysql-server
@@ -105,8 +107,8 @@ rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
 mv /etc/nginx/nginx.conf /etc/nginx/nginx.conf.backup 
 mv /etc/nginx/conf.d/vps.conf /etc/nginx/conf.d/vps.conf.backup 
-wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/PHCarl10/PHCarlOCS/master/nginx.conf" 
-wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/PHCarl10/PHCarlOCS/master/vps.conf" 
+wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/iephdeveloper/iephocs/master/nginx.conf" 
+wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/iephdeveloper/iephocs/master/vps.conf" 
 sed -i 's/cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/g' /etc/php5/fpm/php.ini 
 sed -i 's/listen = \/var\/run\/php5-fpm.sock/listen = 127.0.0.1:9000/g' /etc/php5/fpm/pool.d/www.conf
 
@@ -121,9 +123,9 @@ service nginx restart
 
 apt-get -y install zip unzip
 cd /home/vps/public_html
-wget $source/PHCarlOCS.zip
-unzip PHCarlOCS.zip
-rm -f PHCarlOCS.zip
+wget $source/ieph.zip
+unzip ieph.zip
+rm -f ieph.zip
 chown -R www-data:www-data /home/vps/public_html
 chmod -R g+rw /home/vps/public_html
 
@@ -145,11 +147,12 @@ apt-get -y --force-yes -f install libxml-parser-perl
 
 clear
 echo -e "\e[94m                                                  "
-echo -e "\e[94m         _|_|_|    _|    _|    _|_|_|                      _|            "
-echo -e "\e[94m         _|    _|  _|    _|  _|          _|_|_|  _|  _|_|  _|          "
-echo -e "\e[94m         _|_|_|    _|_|_|_|  _|        _|    _|  _|_|      _|          "
-echo -e "\e[94m         _|        _|    _|  _|        _|    _|  _|        _|              "
-echo -e "\e[94m         _|        _|    _|    _|_|_|    _|_|_|  _|        _|            "
+echo 'echo -e "\e[0;34m██╗███████╗██████╗ ██╗  ██╗"' >> .bashrc
+echo 'echo -e "\e[0;34m██║██╔════╝██╔══██╗██║  ██║"' >> .bashrc
+echo 'echo -e "\e[0;34m██║█████╗  ██████╔╝███████║"' >> .bashrc
+echo 'echo -e "\e[0;34m██║██╔══╝  ██╔═══╝ ██╔══██║"' >> .bashrc
+echo 'echo -e "\e[0;34m██║███████╗██║     ██║  ██║"' >> .bashrc
+echo 'echo -e "\e[0;34m╚═╝╚══════╝╚═╝     ╚═╝  ╚═╝"' >> .bashrc
 echo -e "\e[94m.  ---------------------------------------------------------------      "
 echo -e "\e[94m                                                  "
 echo -e "\e[94m              PLEASE READ CAREFULLY               "
@@ -201,13 +204,14 @@ chmod 777 /home/vps/public_html/config/route.ini
 
 # info
 clear
-echo -e "\e[94m         _|_|_|    _|    _|    _|_|_|                      _|            " | tee -a log-install.txt
-echo -e "\e[94m         _|    _|  _|    _|  _|          _|_|_|  _|  _|_|  _|          " | tee -a log-install.txt
-echo -e "\e[94m         _|_|_|    _|_|_|_|  _|        _|    _|  _|_|      _|          " | tee -a log-install.txt
-echo -e "\e[94m         _|        _|    _|  _|        _|    _|  _|        _|              " | tee -a log-install.txt
-echo -e "\e[94m         _|        _|    _|    _|_|_|    _|_|_|  _|        _|            " | tee -a log-install.txt
+echo 'echo -e "\e[0;34m██╗███████╗██████╗ ██╗  ██╗"' | tee -a log-install.txt
+echo 'echo -e "\e[0;34m██║██╔════╝██╔══██╗██║  ██║"'| tee -a log-install.txt
+echo 'echo -e "\e[0;34m██║█████╗  ██████╔╝███████║"'| tee -a log-install.txt
+echo 'echo -e "\e[0;34m██║██╔══╝  ██╔═══╝ ██╔══██║"' | tee -a log-install.txt
+echo 'echo -e "\e[0;34m██║███████╗██║     ██║  ██║"' | tee -a log-install.txt
+echo 'echo -e "\e[0;34m╚═╝╚══════╝╚═╝     ╚═╝  ╚═╝"' | tee -a log-install.txt
 echo -e "\e[94m.  ---------------------------------------------------------------      " | tee -a log-install.txt
-echo -e "\e[94m        OCS Panel Template by PHCarl        " | tee -a log-install.txt
+echo -e "\e[94m        OCS Panel Template by PHC-Raf(IEPHDEVS)        " | tee -a log-install.txt
 echo -e "\e[94m                                                  " | tee -a log-install.txt
 echo -e "\e[94m                                                  " | tee -a log-install.txt
 echo -e "\e[94m              Installation Complete               " | tee -a log-install.txt
