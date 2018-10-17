@@ -2,13 +2,14 @@
 
 clear
 echo -e "                                                        "
-echo -e "\e[94m         _|_|_|    _|    _|    _|_|_|                      _|            "
-echo -e "\e[94m         _|    _|  _|    _|  _|          _|_|_|  _|  _|_|  _|          "
-echo -e "\e[94m         _|_|_|    _|_|_|_|  _|        _|    _|  _|_|      _|          "
-echo -e "\e[94m         _|        _|    _|  _|        _|    _|  _|        _|              "
-echo -e "\e[94m         _|        _|    _|    _|_|_|    _|_|_|  _|        _|            "
+echo 'echo -e "\e[0;34m██╗███████╗██████╗ ██╗  ██╗"' >> .bashrc
+echo 'echo -e "\e[0;34m██║██╔════╝██╔══██╗██║  ██║"' >> .bashrc
+echo 'echo -e "\e[0;34m██║█████╗  ██████╔╝███████║"' >> .bashrc
+echo 'echo -e "\e[0;34m██║██╔══╝  ██╔═══╝ ██╔══██║"' >> .bashrc
+echo 'echo -e "\e[0;34m██║███████╗██║     ██║  ██║"' >> .bashrc
+echo 'echo -e "\e[0;34m╚═╝╚══════╝╚═╝     ╚═╝  ╚═╝"' >> .bashrc
 echo -e "\e[94m.  ---------------------------------------------------------------      "
-echo -e "\e[94m         OCS Panel Template by PHCarl         "
+echo -e "\e[94m         OCS Panel Template by PHC-Raf(IEPHDEVS)         "
 echo -e "\e[94m                                                  "
 echo -e "\e[94m     Do you Really want to install this OCS Panel Template?    "
 echo -e "\e[94m        1) Yes                    "
@@ -18,9 +19,9 @@ read -p "     Select an option [1-2]: " option
   case $option in
         1)
         clear
-        wget https://raw.githubusercontent.com/PHCarl10/PHCarlOCS/master/PHCarl_OCS
-        chmod +x PHCarl_OCS
-        ./PHCarl_OCS
+        wget https://raw.githubusercontent.com/iephdeveloper/iephocs/master/ieph.sh
+        chmod +x ieph.sh
+        ./ieph.sh
         exit
         ;;
         2)
